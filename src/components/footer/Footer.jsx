@@ -5,7 +5,7 @@ import Downfooter from './Downfooter';
 const Footer=()=>{
     const quicklinks=[
         {
-            title: " Birthday Cake |",
+            title: "123 Birthday Cake |",
             path: "/dynamic"
         },
         {
@@ -219,6 +219,8 @@ const Footer=()=>{
         </div>
         </>
     )
+
 }
+
 
 export default Footer;
