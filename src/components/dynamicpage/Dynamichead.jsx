@@ -9,7 +9,7 @@ const Dynamichead=()=>{
         <Image src="/dynamicBanner.webp" alt='dynamic banner image' unoptimized priority width={50} height={50} className={styles.dynamicBanner}/>
       </Link>
       <Link href="/dynamic">
-        <Image src="/dynamicBanner_mobile.webp" alt='dynamic banner mobile image' unoptimized priority width={50} height={50} className={styles.dynamicBanner_mobile}/>
+        <Image src="/dynamicBanner_Mobile.webp" alt='dynamic banner mobile image' unoptimized priority width={50} height={50} className={styles.dynamicBanner_mobile}/>
       </Link>
         </div>
         </>
