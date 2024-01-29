@@ -388,7 +388,7 @@
     flex-wrap: nowrap;
 }
 .cat4ImgHldr {
-    height: auto;
+    height: 200px;
     position: relative;
     width: 50%;
     border-radius: 10px;
@@ -428,7 +428,7 @@
     color: #312d2d;
     font-weight: 500;
     display: inline-block;
-    margin: .9em 0em;
+    margin: .4em 0em;
     position: relative;
 }
 .category4details  > a::before{

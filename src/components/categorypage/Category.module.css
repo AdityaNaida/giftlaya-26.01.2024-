@@ -1,66 +1,106 @@
-.dynamicHeader{
+.categoryBanner, .categoryTypesContainer{
     height: auto;
     width: 100%;
     padding: 10px 120px;
-    background-color: var(--white);
+    background-color: #fff;
 }
-.dynamicHeader > a > img{
+.categoryBanner > a> img{
     height: auto;
     width: 100%;
     border-radius: 10px;
 }
-.dynamicBanner_mobile{
+.categorMobileBanner{
     display: none;
 }
-.dynamicCategory{
+.categoryTypesContainer > h1{
+    text-align: center;
+    font-size: 3em;
+    color: var(--black);
+} 
+.categoryTypesContainer > h1 > span{
+    position: relative;
+    padding-bottom: 3px;
+}
+.categoryTypesContainer > h1 > span::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--website-theme);
+    border-radius: 3em;
+    animation: Underline 2s linear 1s 1 forwards ;
+}
+@keyframes Underline{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.categoryTypes{
     height: auto;
     width: 100%;
-    padding: 10px 120px;
-    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 2fr));
+    gap: 20px;
+    padding: 30px 0px 10px;
 }
-.dynamicCategory > p{
-    font-size: 1.3em;
-    color: var(--black);
-    font-weight: 400;
+
+.imgHolder{
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.dynamicCategory > h1{
-    font-size: 2.5em;
+.imgHolder > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all ease .5s;
+}
+.imgHolder > img::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 100%;
+    height: 0;
+}
+.imgHolder > img:hover{
+    transform: scale(1.1);
+}
+.categoryTypes > a > .imgHolder + p{
+    margin: .5em 0em;
+    text-align: center;
     color: var(--black);
+    font-size: 1.6em;
     font-weight: 600;
 }
-.dynamicCategory > p > a{
-    color: var(--website-theme);
-    text-decoration: underline;
-    margin-right: 7px;
-}
-.dynamicCategory > p > span::before{
-  content: '>';
-  font-size: 20px;
-  vertical-align: middle;
-  margin-right: 7px;
-}
-.dynamicCategory > p:last-child{
-    font-size: 1.5em;
-    color: var(--black);
-    font-weight: 400;
-}
-.dynamicQuickLinks{
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--white);
+.sortCategory{
+    padding: 10px 120px;
     height: auto;
     width: 100%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    transition: all ease .5s;
-    padding: 10px 120px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.dynamicQuickLinks::-webkit-scrollbar{
-    display: none;
+.sortCategory > h2{
+    color: var(--black);
+    font-size: 2.5em;
+    font-weight: 600;
+    
 }
-.dynamicQuickLinks > span, .dynamicQuickLinks > a{
+.sortBtn > img{
+    height: 10px;
+    width: 10px;
+    vertical-align: middle;
+}
+.sortBtn{
     color: var(--black);
     font-size: 1.4em;
     font-weight: 400; 
@@ -70,28 +110,6 @@
     cursor: pointer;
     text-wrap: nowrap;
     transition: all ease .5s;
-}
-.dynamicQuickLinks > a:hover {
-    background-color: var(--website-theme);
-    color: var(--white);
-}
-.dynamicQuickLinks > span > img{
-    vertical-align: middle;
-}
-.sortBtn > img{
-    height: 10px;
-    width: 10px;
-    vertical-align: middle;
-}
-.sortModal{
-    position: fixed;
-    z-index: 2;
-    height: 100vh;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.3);
-    cursor: pointer;
 }
 .sortBox{
     position: fixed;
@@ -137,7 +155,8 @@
     font-size: 1.6em;
     color: var(--black);
 }
-.dynamicContent{
+/*Category Products*/
+.productContainer{
     height: auto;
     width: 100%;
     padding: 10px 120px;
@@ -146,33 +165,8 @@
     grid-template-columns: repeat(auto-fit, minmax(23%, 2fr));
     gap: 20px;
 }
-.dynamicContent > a{
+.productContainer > a{
     height: auto;
-    background-color: var(--white);
-    border-radius: 10px;
-}
-.category3ImgHldr{
-    position: relative;
-    height: auto;
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
-    overflow: hidden;
-}
-.category3ImgHldr > img{
-    height: 100%;
-    width: 100%;
-    transition: all ease .5s;
-}
-.category3ImgHldr > img:hover{
-    transform: scale(1.1);
-}
-.category3ImgHldr > img::before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding-top: 100%;
-    height: 0;
 }
 .productDetails{
     width: 100%;
@@ -181,7 +175,7 @@
     background-color: var(--white);
     border-radius: 0px 0px 10px 10px;
 }
-.productDetails > h4{
+.productDetails > h3{
     font-size: 1.6em;
     font-weight: 500;
     color: #282828;
@@ -219,8 +213,9 @@
     border-radius: 5px;
     margin: .7em 0em;
 }
+/* .categoryTypesContainer > */
 @media only screen and (max-width: 1400px){
-    .dynamicHeader, .dynamicCategory, .dynamicContent, .dynamicQuickLinks{
+    .categoryBanner, .categoryTypesContainer, .sortCategory, .productContainer{
         padding: 10px 80px;
     }
     .sortBox{
@@ -228,7 +223,7 @@
     }
 }
 @media only screen and (max-width: 1250px){
-    .dynamicHeader, .dynamicCategory, .dynamicContent, .dynamicQuickLinks{
+    .categoryBanner, .categoryTypesContainer, .sortCategory, .productContainer{
         padding: 10px 60px;
     }
     .sortBox{
@@ -236,44 +231,44 @@
     }
 }
 @media only screen and (max-width: 997px){
-    .dynamicHeader, .dynamicCategory, .dynamicContent, .dynamicQuickLinks{
+    .categoryBanner, .categoryTypesContainer, .sortCategory, .productContainer{
         padding: 10px 30px;
+    }
+    .categoryTypes{
+        grid-template-columns: repeat(auto-fit, minmax(20%, 2fr));
+        gap: 20px;
     }
     .sortBox{
         width: 50vw;
     }
 }
 @media only screen and (max-width: 767px){
-    .dynamicHeader, .dynamicCategory, .dynamicContent, .dynamicQuickLinks{
+    .categoryBanner, .categoryTypesContainer, .sortCategory, .productContainer{
         padding: 10px;
     }
     .sortBox{
         width: 70vw;
     }
-    .dynamicContent{
-        gap: 10px;
-    }
-    .rating > img{
+    .rating > img{    
         height: 10px;
         width: 10px;
     }
 }
 @media only screen and (max-width: 600px){
-    .dynamicBanner{
+    .categorBanner{
         display: none;
     }
-    .dynamicBanner_mobile{
+    .categorMobileBanner{
         display: block;
     }
-    .dynamicContent{
-    grid-template-columns: repeat(auto-fit, minmax(48%, 2fr));
+    .categorMobileBanner > img{
+        border-radius: 20px;
     }
-    .dynamicQuickLinks{
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0px;
-        left: 0px;
-        background-color: var(--white);
-        z-index: 1;
+    .categoryTypes, .productContainer{
+        grid-template-columns: repeat(auto-fit, minmax(48%, 2fr));
+        gap: 10px;
+    }
+    .categoryTypes{
+        padding: 15px 0px 10px ;
     }
 }

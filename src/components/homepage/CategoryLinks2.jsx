@@ -7,42 +7,42 @@ const CategoryLinks2=()=>{
         {
             title: "Chocolate Cake",
             img: "/cat9.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Cake",
             img: "/cat10.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Teddy",
             img: "/cat11.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Soft Toys",
             img: "/cat12.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Plants",
             img: "/cat13.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Bonsai",
             img: "/cat14.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Gift",
             img: "/cat15.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Personalized",
             img: "/cat16.webp",
-            path: "/dynamic"
+            path: "/category"
         }
     ]
     return(

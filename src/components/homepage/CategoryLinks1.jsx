@@ -6,42 +6,42 @@ const CategoryLinks1=()=>{
         {
             title: "Valentine's Day",
             img: "/cat1.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Anniversary",
             img: "/cat2.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Birthday",
             img: "/cat3.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Best of Plants",
             img: "/cat4.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Best of Flowers",
             img: "/cat5.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "Unique Gifts",
             img: "/cat6.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "For Him",
             img: "/cat7.webp",
-            path: "/dynamic"
+            path: "/category"
         },
         {
             title: "For Her",
             img: "/cat8.webp",
-            path: "/dynamic"
+            path: "/category"
         }
     ]
     return(
