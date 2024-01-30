@@ -579,7 +579,8 @@
         margin: .5em 0em;
     }
     .BannerHeading > h1{
-        font-size: 2.5em;
+        font-size: 2em;
+        font-weight: 500;
     }
     .rating > img{
         height: 10px;
@@ -622,5 +623,12 @@
     }
     .Category3Container{
         grid-template-columns: repeat(auto-fit, minmax(48%, 2fr));
+    }
+    .category2Boxes1 > a:first-child > span, .category2Boxes1 > a:last-child > span, .category2Boxes2 > a:first-child > span, .category2Boxes2 > a:last-child > span{
+        left: 15%;
+    }
+    .Category3wrapper > h3, .category2Content1Heading > h2, .category4Container > h5{
+        font-size: 2em;
+        font-weight: 500;
     }
 }
